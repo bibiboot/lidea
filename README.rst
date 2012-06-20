@@ -18,9 +18,8 @@ Set up the postgresql for 'OSM'
 
 3. Run the commands for setting up the geometric function in postgresql
     
-    # Command
-    psql -h 127.0.0.1 -U postgres -d osm -f /usr/share/postgresql/9.1/contrib/postgis-1.5/spatial_ref_sys.sql
-    psql -h 127.0.0.1 -U postgres -d osm -f /usr/share/postgresql/9.1/contrib/postgis-1.5/postgis.sql
+    ``psql -h 127.0.0.1 -U postgres -d osm -f /usr/share/postgresql/9.1/contrib/postgis-1.5/spatial_ref_sys.sql``
+    ``psql -h 127.0.0.1 -U postgres -d osm -f /usr/share/postgresql/9.1/contrib/postgis-1.5/postgis.sql``
 
 4. Install ``osm2pgsql``.
 
