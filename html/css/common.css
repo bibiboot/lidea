@@ -1,0 +1,97 @@
+/* CSS Document */
+.alert_r span, .alert_y span, .alert_b span, .ttip_w span, .ttip_w em, .ttip_o em, .ttip_b em, .ttip_h em, .ttip_cls em, .ttip_cls a, .ttip_d, .ttip_d em{background-image:url(/images/v2/ico.gif);}
+h1, h2, h3, h4, h5, h6{font-family: 'Trebuchet MS', Arial;}
+h1, h2, h3{color:#2662af;}
+h4, h5, h6{color:#1d1d1d}
+h1{font-size:30pt;}
+h2{font-size:24pt;}
+h3{font-size:18pt;}
+h4{font-size:16pt;}
+h5{font-size:13pt;}
+h6{font-size:12pt;}
+/*p{color:#7a7879; margin-bottom:22px!important;}*/
+.alert_r, .alert_y, .alert_b, .ttip_b, .ttip_d, .siOver, .loginBut, .cancelBut{border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.pagin{padding:5px 0; font-weight:bold; text-align:center}
+.pagin a.num, .pagin span{border:1px solid #ABCBE2; padding:0 5px; margin-right:3px}
+.pagin span{background:#2C67B3; color:#fff; border:1px solid #2C67B3;}
+input.text{border-style:solid; border-width:2px; border-color:#B7B7B7 #DBDBDB #DBDBDB; font-size:16px; color:#8A8A8C; padding:8px}
+input.tSel{border:2px solid #5685BD; font-size:16px; color:#8A8A8C; padding:8px; box-shadow:0 0px 5px 0 #5685BD; -moz-box-shadow:0 0px 5px 0 #5685BD; webkit-box-shadow:0 0px 5px 0 #5685BD;}
+input.tErr, textarea.tErr, select.tErr{border:2px solid #E53A6F;  color:#C70101; box-shadow:0 0px 5px 0 #E53A6F; -moz-box-shadow:0 0px 5px 0 #E53A6F; webkit-box-shadow:0 0px 5px 0 #E53A6F;}
+span.tErr{border:2px solid #E53A6F;  color:#C70101; box-shadow:0 0px 5px 0 #E53A6F; -moz-box-shadow:0 0px 5px 0 #E53A6F; webkit-box-shadow:0 0px 5px 0 #E53A6F;}
+.errTx{color:#F0070D; font-size:12px} 
+.signCon{box-shadow:3px 3px 0 0 #808080; -moz-box-shadow:3px 3px 0 0 #808080; -webkit-box-shadow:3px 3px 0 0 #808080; width:180px; border:1px solid #ccc; padding:10px;}
+.signCon p{font:bold 16px 'gobold','Trebuchet MS', Arial; color:#195CAA; margin-bottom:15px!important}
+.signCon ul li{margin-bottom:5px;}
+.alert_r, .alert_y, .alert_b{padding:10px; position:relative;}
+.alert_r span, .alert_y span, .alert_b span, .ttip_w span{/*position:absolute; right:10px; top:10px;*/ width:8px; height:8px; cursor:pointer; cursor: pointer; display: block; float: right; height: 8px; margin: -3px; }
+.alert_r{border:1px solid #EBD4DA; background:#F2DEDF; color:#B74A4F; margin: 5px 0;}
+.alert_r em { font-style: normal;}
+.alert_y{ border:1px solid #F0EFB9; background:#FDF7C3; color:#6C644D;}
+.alert_b{ border:1px solid #BFE7E6; background:#DAEEF9; color:#3B7C9C;}
+.ft_update{position:absolute; margin:7% 0 0 34%; border:2px solid #518FC8; border-radius:15px; -moz-border-radius:15px; -webkit-border-radius:15px; font-size:22px; color:#1D69C1; padding:30px 50px; background:#fff; top:0}
+.texArea{border-style:solid; border-width:1px; border-color:#969696 #ccc #ccc; padding:8px; font-size:16px; color:#8A8A8C;}
+
+.ttip_w, .ttip_o{padding:10px; box-shadow:0 3px 3px 0 #ccc; -moz-box-shadow:0 3px 3px 0 #ccc; -webkit-box-shadow:0 3px 3px 0 #ccc; position:relative}
+.ttip_w{border:1px solid #ADC8E5;}
+.ttip_o{ background:#FFF6ED; border:1px solid #FFCFBE;}
+.ttip_w h3, .ttip_o h3{font:bold 13px Arial, Helvetica, sans-serif; color:#006978; margin-bottom:10px}
+.ttip_w p, .ttip_o p{color:#121212}
+.ttip_w em, .ttip_o em, .ttip_b em{width:17px; height:9px; position:absolute; top:-9px; left:30px}
+.ttip_w em{background-position:0 -16px;}
+.ttip_o em{background-position:0 -40px;}
+.ttip_b{background:#676767; color:#fff; padding:10px; position:relative;}
+.ttip_b em{background-position:0 -60px;}
+.ttip_h{border:1px solid #C6C6C6; background:#E7E7E7; color:#171717; position:relative; padding:7px 10px; box-shadow:0 2px 2px 0 #ccc; -moz-box-shadow:0 2px 2px 0 #ccc; -webkit-box-shadow:0 2px 2px 0 #ccc;}
+.ttip_h em{width:7px; height:9px; position:absolute; top:34%; right:-3px; background-position:0 -82px; }
+.ttip_cls{border:1px solid #B26A6E; background:#FEF1F8; position:relative; box-shadow:0 2px 2px 0 #ccc; -moz-box-shadow:0 2px 2px 0 #ccc; -webkit-box-shadow:0 2px 2px 0 #ccc; float:left}
+.ttip_cls em{width:7px; height:10px; position:absolute; top:34%; right:-7px;  background-position:0 -99px; }
+.ttip_cls a{background-position:0 -153px; display:block; width:11px; height:11px; margin:10px;}
+.ttip_d{position:relative; box-shadow:0 2px 2px 0 #ccc; background-position:0 -176px; -moz-box-shadow:0 2px 2px 0 #ccc; -webkit-box-shadow:0 2px 2px 0 #ccc; padding:5px 0 6px 10px; color:#fff; font-size:11px; border:1px solid #252A33; width:200px}
+.ttip_d em{width:15px; height:27px; position:absolute; top:-1px; right:-8px;  background-position:0 -120px; }
+.siOver{width:834px; height:400px;  top:20%; overflow:hidden; left:14%; background:#fff; border:1px solid #C4C4C4; padding:25px;}
+
+/*this part for login overlay smoothbox*/
+.siOver .head{border-bottom:2px solid #F1F1F1; padding-bottom:8px; text-align:right}
+.siOver .head strong{float:left; font-size:20px; color:#2660AA; margin-top:-4px}
+.siOver .left{width:392px; height:300px; float:left; display:block; padding-left:10px; font-size:12px; color:#757374}
+.siOver .left strong{font-size:14px; display:block; margin-bottom:20px; color:#262626}
+.siOver .signTex{display:block; border-width:2px 1px 1px; border-style:solid; border-color:#C0C0C0; padding:6px; margin:5px 0 10px 0; width:378px;}
+.siOver .left .forgot{float:left; font-size:11px; margin-top:-5px}
+.siOver .left .loginBut{ background:#2E66B3; border:1px solid #013D7B; font:bold 14px Arial; color:#fff; box-shadow:0 2px 0 -1px #84C4F4 inset} 
+.siOver .left .cancelBut{ background:#F6F6F6; border:1px solid #D4D4D4; font:bold 14px Arial; color:#272727; }
+.siOver .left .loginBut, .siOver .left .cancelBut{float:right; padding:5px 20px; margin-left:4px; margin-top:12px; cursor:pointer}
+.siOver .right{float:right; position:relative; border-left:1px dotted #E0E0E0; position:relative;width:262px; color:#000; padding:20px 40px 25px 62px; margin-top:34px;}
+.siOver .right big{font-size:16px; display:block}
+.siOver .right em{position:absolute; top:40%; left:-20px; border-radius:20px; padding:10px; background:#fff;  border:1px solid #DBDBDB; font-style:normal}
+.siOver hr{clear:both; display:block; border:1px solid #F3F3F3; background:#E8E8E8; height:2px; }
+.siOver a.fsign, .siOver a.gsign{background-image:url(/images/v2/ico2.gif); background-repeat:no-repeat; font-size:11px;  margin-top:30px; float:left; padding-top:30px; display:block; width:105px; }
+.siOver a.fsign{background-position:-137px 0;}
+
+/* for calendar */
+#calendarBox { clear:both; }
+#gcal { border:solid 1px #ccc; position:absolute; width:424px; z-index:999; }
+#gcal .ghed { background:#D6E6F6; overflow:hidden; color: #333333; padding:5px; }
+#gcal .ghed span { background:#D6E6F6; float:left; font-weight:bold; color: #333333; }
+#gcal .ghed a { float:right; background: url("/images/v2/cls.gif") no-repeat left top ; height: 17px; width: 17px; }
+#gcal .gbdy { padding:10px 5px; background:#fff; overflow:hidden; }
+#gcal .gbdy .gmnta { width:200px; float:left;  }
+#gcal .gbdy .gmntb { width:200px; float:left; padding-left:13px; border-left:solid 1px #ccc; }
+
+#gcal .gbdy span, #gcal .gbdy p { width:100%; overflow:hidden; }
+#gcal .gbdy span { display:block; padding-bottom:10px; }
+#gcal .gbdy span a.glar, #gcal .gbdy span a.grar { float:left; height: 18px; width: 25px; }
+#gcal .gbdy span a.glar { background: url("/images/v2/pre.gif") no-repeat center center; }
+#gcal .gbdy span a.grar { background: url("/images/v2/next.gif") no-repeat center center; }
+#gcal .gbdy .gmnta span a.grar, #gcal .gbdy .gmntb span a.glar { visibility:hidden; }
+#gcal .gbdy span label { width:150px; float:left; text-align:center; font-weight:bold; }
+#gcal .gbdy em, #gcal .gbdy dfn { float: left; font-style:normal; line-height: 16px; margin: 2px; text-align: center; width: 23px; height: 19px; padding-top:3px; color:#2C67B3; }
+#gcal .gbdy dfn { color:#333; }
+#gcal .gbdy em:hover { background:#2a62b7; cursor:pointer; color:#fff; font-weight:bold;  }
+
+#gcal .gbdy em.gdis { color:#ccc; }
+#gcal .gbdy em.gdis:hover { color:#ccc; background:none; cursor:not-allowed; }
+#gcal .gbdy em.gsel { background:#2a62b7; font-weight:bold; color:#fff; }
+#gcal .gbdy big {  display:block; height:68px; padding:70px 20px 0; text-align:center;} 
+.ui-dialog-titlebar.ui-widget-header { background:none  }
+.ui-dialog.ui-widget-content { border:2px solid #5E9BCF  }
+/* end for calendar */
