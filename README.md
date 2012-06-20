@@ -12,5 +12,27 @@ Ideas for space in this forsaken world around us. Very narcissistic in nature.
 5. Run the below command to convert data from osm into database.
    osm2pgsql -l -p osm -d osm -U postgres -H 127.0.0.1 -W PATH_TO_OSM_FILE
 
-OR
+OR 
+
+# Restore from backup
+1. Run the command to restore from the dump (Postgresql) static/osm/osm.backup
+   psql dbname < infile ( Please take care to first create the database )
+
+# Set up the places_attribute table
+1. Run the file places/filler.py
+   
+
+OR 
+
+# Restore from backup
+1. Run the command to restore from the dump (Mysql) static/places/idea.sql
+   mysql-uroot -proot idea < ideal.sql
+
+# Install the redis
+# Install the redis-py from the below mentioned link
+  https://github.com/andymccurdy/redis-py/
+
+Commands to take backup of postgresql
+pg_dump -h 127.0.0.1 -U postgres -W osm > osm.backup
+
 
