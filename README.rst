@@ -18,8 +18,8 @@ Set up the postgresql for 'OSM'
 
 3. Run the commands for setting up the geometric function in postgresql::
     
-    psql -h 127.0.0.1 -U postgres -d osm -f /usr/share/postgresql/9.1/contrib/postgis-1.5/spatial_ref_sys.sql
-    psql -h 127.0.0.1 -U postgres -d osm -f /usr/share/postgresql/9.1/contrib/postgis-1.5/postgis.sql
+    psql -h HOST -U USERNAME -d DATABASE -f /usr/share/postgresql/9.1/contrib/postgis-1.5/spatial_ref_sys.sql
+    psql -h HOST -U USERNAME -d DATABASE -f /usr/share/postgresql/9.1/contrib/postgis-1.5/postgis.sql
 
 4. Install ``osm2pgsql``.
 
@@ -49,7 +49,7 @@ Set up the redis for auto suggest
 
 2. Install the `redis-py`_.
 
-3. Run the command to fill the redis with prefixes.
+3. Run the command to fill the redis with prefixes::
 
     python suggest/filler.py
 
