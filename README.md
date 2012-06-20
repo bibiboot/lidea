@@ -14,25 +14,29 @@ Ideas for space in this forsaken world around us. Very narcissistic in nature.
 
 OR 
 
-# Restore from backup
-1. Run the command to restore from the dump (Postgresql) static/osm/osm.backup
-   psql dbname < infile ( Please take care to first create the database )
+# Restore from backup for database named 'osm'
+1. FILE: static/osm/osm.backup
+
 
 # Set up the places_attribute table
-1. Run the file places/filler.py
-   
+>> python places/filler.py
 
 OR 
 
-# Restore from backup
-1. Run the command to restore from the dump (Mysql) static/places/idea.sql
-   mysql-uroot -proot idea < ideal.sql
+# Restore from backup for database named 'idea'
+1. FILE: static/places/idea.sql
+
 
 # Install the redis
+http://redis.io/download
+
+
 # Install the redis-py from the below mentioned link
   https://github.com/andymccurdy/redis-py/
 
-Commands to take backup of postgresql
-pg_dump -h 127.0.0.1 -U postgres -W osm > osm.backup
 
+# Things to remember
+1. pg_dump -h 127.0.0.1 -U postgres -W osm > osm.backup (backup postgresql)
+2. psql dbname < infile ( Please take care to first create the database )
+3. mysql-uroot -proot idea < ideal.sql
 
