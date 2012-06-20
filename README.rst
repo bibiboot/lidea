@@ -25,7 +25,7 @@ Set up the postgresql for 'OSM'
 
 5. Run the command to transfer data from the osm file to postgresql database.
 
-    osm2pgsql -l -p osm -d DATABASE -U USERNAE -H Host -W OSM_FILE
+	osm2pgsql -l -p osm -d DATABASE -U USERNAE -H Host -W OSM_FILE
 
 6. Install ``postgresql_psycopg2``.
 
