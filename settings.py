@@ -1,4 +1,4 @@
-# Django settings for idea project.
+# Django settings for lidea project.
 
 import os
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
@@ -128,7 +128,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'idea.urls'
+ROOT_URLCONF = 'lidea.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'html/templates')
@@ -143,9 +143,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'idea.places',
-    'idea.suggest',
-    'idea.osm',
+    'lidea.places',
+    'lidea.suggest',
+    'lidea.osm',
 )
 
 # A sample logging configuration. The only tangible logging
