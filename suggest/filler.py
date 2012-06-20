@@ -12,7 +12,7 @@ class AutoSuggestFiller():
         #sentences = [ "Take out the trash", "Talk to the school bus driver" ]
         for attr in Attribute.objects.all():
             index = int(attr.osm_id)
-            sentence = "%s %s %s %s" % (attr.name, attr.suburb, attr.city, attr.state)
+            sentence = "%s : %s : %s : %s" % (attr.name, attr.suburb, attr.city, attr.state)
             sentence = sentence.lower()
             print 'Adding %s' % sentence
             self.addSentence(sentence,index)
