@@ -15,7 +15,7 @@ Ideas for space in this forsaken world around us. Very narcissistic in nature.
 OR 
 
 # Restore from backup for database named 'osm'
-1. FILE: static/osm/osm.backup
+1. FILE: static/osm.postgresql
 
 
 # Set up the places_attribute table
@@ -24,7 +24,7 @@ OR
 OR 
 
 # Restore from backup for database named 'idea'
-1. FILE: static/places/idea.sql
+1. FILE: static/dump/idea.sql
 
 
 # Install the redis
@@ -37,6 +37,6 @@ http://redis.io/download
 
 # Things to remember
 1. pg_dump -h 127.0.0.1 -U postgres -W osm > osm.backup (backup postgresql)
-2. psql dbname < infile ( Please take care to first create the database )
-3. mysql-uroot -proot idea < ideal.sql
+2. psql dbname < infile ( Restore postgresql )
+3. mysql-uroot -proot idea < ideal.sql ( Restore mysql )
 
