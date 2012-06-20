@@ -53,5 +53,11 @@ Set up the redis for auto suggest
 
     python suggest/filler.py
 
+On Django < 1.3::
+
+    CACHE_BACKEND = 'redis_cache.cache://<host>:<port>'
+
+On Django >= 1.3::
+
 .. _redis-py: http://github.com/andymccurdy/redis-py/
 .. _redis: http://redis.io/download
