@@ -116,7 +116,14 @@ CACHES = {
         'LOCATION': '127.0.0.1:6379',
         'OPTIONS': {
              'DB': 2
-         }
+         },
+    },
+    'event': {
+        'BACKEND': 'lib.redis_cache.RedisCache',
+        'LOCATION': '127.0.0.1:6379',
+        'OPTIONS': {
+             'DB': 3
+         },
     }
 }
 
@@ -146,6 +153,7 @@ INSTALLED_APPS = (
     'lidea.places',
     'lidea.suggest',
     'lidea.osm',
+    'lidea.event',
 )
 
 # A sample logging configuration. The only tangible logging
