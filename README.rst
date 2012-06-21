@@ -53,5 +53,15 @@ Set up the redis for auto suggest
 
     python suggest/filler.py
 
+
+Set up the crawler for app 'event'
+-----
+
+1. Install the `webkit-server`_.
+
+2. Install the `dryscrape`_.
+
 .. _redis-py: http://github.com/andymccurdy/redis-py/
 .. _redis: http://redis.io/download
+.. _dryscrape: https://github.com/niklasb/dryscrape
+.. _webkit-server: https://github.com/niklasb/webkit-server
