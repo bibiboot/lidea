@@ -25,7 +25,7 @@ gi.suggest = {
 	getCity: function(){		
 		if(this.suggVal.length<3){	
 			this.hideCity();    
-	    } else if (this.iKeyCode < 32 || (this.iKeyCode >= 33 && this.iKeyCode <= 46) || (this.iKeyCode >= 112 && this.iKeyCode <= 123)){
+	    } else if ((this.iKeyCode < 32 && this.iKeyCode != 8) || (this.iKeyCode >= 33 && this.iKeyCode <= 46) || (this.iKeyCode >= 112 && this.iKeyCode <= 123)){
 	    	this.keyHandler();
 	    } else {
 	    	this.nowElm = -1;	    	
