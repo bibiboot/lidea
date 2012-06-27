@@ -1,4 +1,5 @@
-from ideacalculator.models import Place, PlaceType, TypeRelation
+from ideacalculator.models import PlaceType, TypeRelation
+from place.models import Attribute as Place
 from ideacalculator.utils import getNearbyPlaces, getPlaceCombs, getWeightage, getSentence, getPlaces
 
 from django.utils import simplejson

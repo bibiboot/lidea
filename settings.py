@@ -16,7 +16,7 @@ DATABASE_ROUTERS = ['multipleDatabases.MasterSlaveRouter']
 
 DATABASES = {
     'default':{
-        'ENGINE': 'mysql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'idea',
         'USER': 'root',
         'PASSWORD': 'root',
@@ -25,7 +25,7 @@ DATABASES = {
         'OPTIONS':{"init_command":"SET storage_engine=INNODB"},
     },
     'osm': {
-        'ENGINE': 'postgresql_psycopg2',     # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',     # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'osm',                      # Or path to database file if using sqlite3.
         'USER': 'postgres',                  # Not used with sqlite3.
         'PASSWORD': 'root',                  # Not used with sqlite3.
@@ -146,6 +146,7 @@ INSTALLED_APPS = (
     'lidea.places',
     'lidea.suggest',
     'lidea.osm',
+    'lidea.ideacalculator',
 )
 
 # A sample logging configuration. The only tangible logging

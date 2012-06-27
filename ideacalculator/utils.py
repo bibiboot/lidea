@@ -2,7 +2,8 @@ from consts import *
 from django.db.models import Q
 import math
 
-from ideacalculator.models import Place, TypeRelation
+from ideacalculator.models import TypeRelation
+from place.models import Attribute as Place
 
 def getWeightage(origin, placeComb):
     points = 0

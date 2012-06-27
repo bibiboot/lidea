@@ -69,6 +69,12 @@ class Attribute(models.Model):
     width = models.CharField(max_length=100, null=True)
     wood = models.CharField(max_length=100, null=True)
 
+    def get_lat(self):
+        return self.lat
+
+    def get_lng(self):
+        return self.lng
+
 class AttributeAdmin(admin.ModelAdmin):
     list_display=('osm_id',
                   'name',

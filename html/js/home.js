@@ -43,7 +43,7 @@ gi.suggest = {
 		var cityCode = ''
 		this.getElm.className = 'db';
 		for(var i=0;i<cityLen;i++){
-			cityCode += '<a id="row'+i+'" rel="'+cityJson[i].iatacode+'" >'+cityJson[i].cityname+' ( '+cityJson[i].iatacode+' - '+cityJson[i].airportname+' )</a>';				
+			cityCode += '<a id="row'+i+'" rel="'+cityJson[i].iatacode+'" onclick="this.getIdea('+cityJson[i].id+')" >'+cityJson[i].cityname+' ( '+cityJson[i].iatacode+' - '+cityJson[i].airportname+' )</a>';				
 		}
 		$g('gi_suggest').innerHTML = cityCode;
 		for(var i=0;i<cityLen;i++){
