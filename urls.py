@@ -11,13 +11,10 @@ urlpatterns = patterns('',
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-
     #(r'^home/', include('autosuggest.example.urls')),
-    (r'^home/', 'lidea.suggest.views.home'),
     (r'^search/', 'lidea.suggest.views.autosuggest'),
 
    (r'^css/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_PATH +'html/css/'}),
    (r'^js/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_PATH + 'html/js/'}),
-
 
 )

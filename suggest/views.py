@@ -22,7 +22,8 @@ def autosuggest(request):
         if (request.GET.has_key('search')):
             searchWord = request.GET['search'].lower()
             airList = []
-            airList = search(searchWord)
+            #airList = search(searchWord)
+            airList = searchincludespace(searchWord)
             return HttpResponse(simplejson.dumps(airList))
         else:
             return HttpResponse('{"result":"failed","desc":"No Matches Found"}')
@@ -57,8 +58,10 @@ def answer(hashes_list):
     r = get_cache('autosuggest')
     for hashes in hashes_list:
         di = {}
-        di['cityname'] = r._client.hget("task", hashes).title()
-        di['iatacode'] = 'xxx'
-        di['airportname'] = 'yyy'
+        result = r._client.hget("task", hashes)
+        rlist = result.split(':')
+        di['cityname'] = rlist[0].title()
+        di['iatacode'] = rlist[1].title()
+        di['airportname'] = "%s, %s" % (rlist[2].title(), rlist[3].title())
         suggList.append(di)
     return suggList

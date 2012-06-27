@@ -84,15 +84,15 @@ top:58px;background-color:#ffffff;}
 .calendar a.box:hover{background-color:#2a62b7;color:#ffffff;font-weight:bold;}
 /********* auto selection *********/
 
-#gi_suggest {width:283px;/*float:left;*/ border:1px solid black;font-weight:bold;position:absolute;z-index:999;background-color:#ffffff; }
+#gi_suggest {width:734px;/*float:left;*/ border:1px solid black;font-weight:bold;position:absolute;z-index:999;background-color:#ffffff; }
 #gi_suggest a { display:block; border:1px solid #FFFFFF; padding:5px; display:block; font-weight:normal; -webkit-transition:all .5s ease-in; }
 /*#gi_suggest .gsel { background:#d6e6f6; color:#000; -webkit-transition:all .5s ease-in; }*/
 #gi_suggest .gsel { background:black; color:white; -webkit-transition:all .5s ease-in; }
-.autSlct{color:#2661af;width:267px;border:1px solid #fffff;border:1px solid #FFFFFF;padding:5px;display:block;}
+.autSlct{color:#2661af;width:719px;border:1px solid #fffff;border:1px solid #FFFFFF;padding:5px;display:block;}
 .atsl{/*float:left;*/width:100%;}
 
 
-.atsl select, .atsl input {border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;border:1px solid Black;border-top:2px solid Black;padding:8px;width:270px;font-weight:bold;display:block;}
+.atsl select, .atsl input {border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;border:1px solid Black;border-top:2px solid Black;padding:8px;width:719px;font-weight:bold;display:block;}
 .atsl input { padding:10px 8px; }
 .atsl select option{color:#2661af;border:1px solid #fffff;border:1px solid #FFFFFF;margin:5px 0;
 padding:0 5px 0;}
