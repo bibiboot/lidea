@@ -1,9 +1,10 @@
 from consts import *
 from django.db.models import Q
 import math
+import pdb
 
-from ideacalculator.models import TypeRelation
-from place.models import Attribute as Place
+from ideacalculator.models import TypeRelation, PlaceType
+from places.models import Attribute as Place
 
 def getWeightage(origin, placeComb):
     points = 0
@@ -11,9 +12,12 @@ def getWeightage(origin, placeComb):
     maxWt = 0
     p1, p2 = getPlaces(placeComb)
     try:
+        #print p1.getType()
         t1 = PlaceType.objects.get(name=p1.getType())
         t2 = PlaceType.objects.get(name=p2.getType())
-    except:
+        print 'found one place'
+    except Exception,e:
+        #print e
         return 0, None
     time, day = getTime()
     weather = getWeather()
@@ -83,12 +87,16 @@ def getWeightage(origin, placeComb):
     if(w>maxWt):
         maxWt = w
         favFactor = COMBINATION_FACTOR_TEXT
+    if (points>0):
+       print points
+       print p1.name, p2.name
     return points, favFactor
 
 
 def getTime():
+    day = None
     time = None
-    return time
+    return time, day
 
 
 def getWeather():
@@ -127,10 +135,15 @@ def getPlaceCombs(origin, places):
                 p2=place1
             placeCombs.append([p1, p2])
         i +=1
+    for x in placeCombs:
+        pass
+        #print x[0].getLat()== x[1].getLat(), x[0].getLng()== x[1].getLng()
+
     return placeCombs
 
 def getSentence(p1, p2, factor):
-    return "Go to "+str(p2.name)+" through "+str(p1.name)+". "+str(factor)+" is favourable"
+    #print "Go to "+str(p2.name)+"  "+str(p2.osm_id)+" through "+str(p1.name)+"  "+str(p2.osm_id)+". "+str(factor)+" is favourable"
+    return "Go to "+str(p2.name)+"  "+" through "+str(p1.name)+"  "+". "+str(factor)+" is favourable"
 
 def getPlaces(placeComb):
     return placeComb[0], placeComb[1]

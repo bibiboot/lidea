@@ -69,11 +69,14 @@ class Attribute(models.Model):
     width = models.CharField(max_length=100, null=True)
     wood = models.CharField(max_length=100, null=True)
 
-    def get_lat(self):
-        return self.lat
+    def getLat(self):
+        return float(self.lat)
 
-    def get_lng(self):
-        return self.lng
+    def getLng(self):
+        return float(self.lon)
+
+    def getType(self):
+        return self.amenity
 
 class AttributeAdmin(admin.ModelAdmin):
     list_display=('osm_id',
@@ -140,4 +143,4 @@ class AttributeAdmin(admin.ModelAdmin):
 'width',
 'wood')
 
-admin.site.register(Attribute, AttributeAdmin)
+#admin.site.register(Attribute, AttributeAdmin)
