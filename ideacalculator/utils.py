@@ -15,7 +15,7 @@ def getWeightage(origin, placeComb):
         #print p1.getType()
         t1 = PlaceType.objects.get(name=p1.getType())
         t2 = PlaceType.objects.get(name=p2.getType())
-        print 'found one place'
+        #print 'found one place'
     except Exception,e:
         #print e
         return 0, None
@@ -87,9 +87,6 @@ def getWeightage(origin, placeComb):
     if(w>maxWt):
         maxWt = w
         favFactor = COMBINATION_FACTOR_TEXT
-    if (points>0):
-       print points
-       print p1.name, p2.name
     return points, favFactor
 
 

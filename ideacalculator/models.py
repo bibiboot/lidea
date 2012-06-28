@@ -2,20 +2,6 @@ from django.db import models
 from consts import NAME_MAX_LENGTH
 from django.contrib import admin
 
-class Place(models.Model):
-    name = models.CharField(max_length=NAME_MAX_LENGTH)
-    amenity = models.CharField(max_length=NAME_MAX_LENGTH)
-    lat = models.FloatField()
-    lng = models.FloatField()
-
-    def getType(self):
-        return self.amenity
-
-    def getLat(self):
-        return self.lat/10000000
-
-    def getLng(self):
-        return self.lng/10000000
 
 class PlaceType(models.Model):
    name = models.CharField(max_length=NAME_MAX_LENGTH)

@@ -7,11 +7,6 @@ from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
-def homepage(request):
-    places = Place.objects.all()
-    return render_to_response('home.html', {'places': places})
-
-@csrf_exempt
 def getideas(request):
     if request.method.upper() == 'GET':
         try:
@@ -34,4 +29,4 @@ def getideas(request):
                         'sentence': sentence})
         ideas.sort(key=itemgetter('points'))
         ideas.reverse()
-        return render_to_response('idea.html', {'ideas': ideas})
+        return render_to_response('ideacalculator/idea.html', {'ideas': ideas})
