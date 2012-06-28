@@ -47,7 +47,8 @@ gi.suggest = {
 		}
 		$g('gi_suggest').innerHTML = cityCode;
 		for(var i=0;i<cityLen;i++){
-			$g('row'+i).onclick = function(){ $g('gi_destination').value = this.rel; $g('gi_dest_text').value = this.innerHTML; gi.suggest.hideCity(); }
+			var code = cityJson[i].iatacode;
+			$g('row'+i).onclick = function(){  $g('gi_destination').value = this.rel; $g('gi_dest_text').value = this.innerHTML; gi.suggest.hideCity(); gi.suggest.getIdea(code);}
 			$g('row'+i).onmouseover = function(){ this.className="gsel"; }
 			$g('row'+i).onmouseout = function(){ this.className=""; }
 		}			
@@ -100,7 +101,10 @@ gi.suggest = {
 	          }
 	       }
 	    }
-	}		
+	},	
+	getIdea: function(osm_id){
+		window.location.href = "/loveideaz/getidea/?osmid="+osm_id;
+	}	
 }
 
 function citySuggest(cityJson){ gi.suggest.cityRender(cityJson); }
@@ -157,6 +161,6 @@ gi.ajax = {
 	},
 	closeSetting: function(){			
 		if(giOpenSett != ''){ $(giOpenSett).className = 'dn'; }		
-	}
+	} 
 };
 
