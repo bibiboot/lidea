@@ -1,10 +1,21 @@
 from django.db import models
 from consts import NAME_MAX_LENGTH
-from django.contrib import admin
-
 
 class PlaceType(models.Model):
-   name = models.CharField(max_length=NAME_MAX_LENGTH)
+   name = models.CharField(choices=(('Cinema','Cinema'),
+                                    ('Restaurant','Restaurant'),
+                                    ('Parking','Parking'),
+                                    ('Garden','Garden'),
+                                    ('Mall','Mall'),
+                                    ('Highway','Highway'),
+                                    ('Historical','Historical'),
+                                    ('Cafe','Cafe'),
+                                    ('Bakery', 'Bakery'),
+                                    ('Sweets', 'Sweets'),
+                                    ('Lake','Lake'),
+                                    ('Beach', 'Beach'),
+                                    ('Icecream-parlor', 'Icecream-parlor')), max_length=50)
+
    place_pt = models.PositiveIntegerField()
    fav_time = models.TextField(blank=True,
                                null=True)
@@ -22,9 +33,6 @@ class PlaceType(models.Model):
    def get_fav_days(self):
        return []
 
-class PlaceTypeAdmin(admin.ModelAdmin):
-   pass
-
 class TypeRelation(models.Model):
    type1 = models.ForeignKey(PlaceType, related_name='type1')
    type2 = models.ForeignKey(PlaceType, related_name='type2')
@@ -35,5 +43,3 @@ class TypeRelation(models.Model):
                                null=True)
    fav_day = models.TextField(blank=True,
                                null=True)
-
-#admin.site.register(PlaceType, PlaceTypeAdmin)
