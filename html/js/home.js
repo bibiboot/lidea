@@ -47,8 +47,8 @@ gi.suggest = {
 		}
 		$g('gi_suggest').innerHTML = cityCode;
 		for(var i=0;i<cityLen;i++){
-			var code = cityJson[i].iatacode;
-			$g('row'+i).onclick = function(){  $g('gi_destination').value = this.rel; $g('gi_dest_text').value = this.innerHTML; gi.suggest.hideCity(); gi.suggest.getIdea(code);}
+			var code = cityJson[i].osmid;
+			$g('row'+i).onclick = function(){  $g('gi_destination').value = this.rel; $g('gi_dest_text').value = this.innerHTML; gi.suggest.hideCity();gi.suggest.getIdea(code); }
 			$g('row'+i).onmouseover = function(){ this.className="gsel"; }
 			$g('row'+i).onmouseout = function(){ this.className=""; }
 		}			
