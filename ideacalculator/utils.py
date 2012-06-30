@@ -138,10 +138,6 @@ def getPlaceCombs(origin, places):
 
     return placeCombs
 
-def getSentence(p1, p2, factor):
-    #print "Go to "+str(p2.name)+"  "+str(p2.osm_id)+" through "+str(p1.name)+"  "+str(p2.osm_id)+". "+str(factor)+" is favourable"
-    return "Go to "+str(p2.name)+"  "+" through "+str(p1.name)+"  "+". "+str(factor)+" is favourable"
-
 def getPlaces(placeComb):
     return placeComb[0], placeComb[1]
 
