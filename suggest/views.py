@@ -61,8 +61,8 @@ def answer(hashes_list):
         result = r._client.hget("task", hashes)
         rlist = result.split(':')
         di['cityname'] = rlist[0].title()
-        #di['iatacode'] = rlist[1].title()
-        di['iatacode'] = hashes
+        di['iatacode'] = rlist[1].title()
+        di['osmid'] = hashes
         di['airportname'] = "%s, %s" % (rlist[2].title(), rlist[3].title())
         suggList.append(di)
     return suggList
