@@ -14,12 +14,16 @@ Set up the postgresql for 'OSM'
 
 1. Install the ``postgresql-9.1``.
 
+    sudo apt-get install postgresql-9.1-postgis postgresql-contrib-9.1
+
 2. Create a database named ``osm``.
+    
+    sudo -u postgres
 
 3. Run the commands for setting up the geometric function in postgresql::
     
-    psql -h HOST -U USERNAME -d DATABASE -f /usr/share/postgresql/9.1/contrib/postgis-1.5/spatial_ref_sys.sql
     psql -h HOST -U USERNAME -d DATABASE -f /usr/share/postgresql/9.1/contrib/postgis-1.5/postgis.sql
+    psql -h HOST -U USERNAME -d DATABASE -f /usr/share/postgresql/9.1/contrib/postgis-1.5/spatial_ref_sys.sql
 
 4. Install ``osm2pgsql``.
 
