@@ -12,11 +12,11 @@ Includes an auto suggest integerated with osm maps. Convert the osm map to djang
 Set up the postgresql for 'OSM'
 -----
 
-1. Install the ``postgresql-9.1``.
+1. Install the ``postgresql-9.1``::
 
     sudo apt-get install postgresql-9.1-postgis postgresql-contrib-9.1
 
-2. Create a database named ``osm``.
+2. Create a database named ``osm``::
     
     sudo -u postgres
 
