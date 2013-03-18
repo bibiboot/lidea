@@ -17,18 +17,15 @@
 <body>
 <div class='center'>
 <h1>Ideas</h1>
-{% for idea in ideas %}
-	<div>{{ idea.verb1 }} {{ idea.place1 }}  {{ idea.verb2 }} {{ idea.place2 }}</div>
+{% for attr in ideas %}
+	<div>{{ attr.name }} {{ attr.suburb}} {{ attr.city }} {{ attr.state }}</div>
         <div class='factor'> 
-            {% for factor in idea.factors %}
+            {% for factor in attr.factors %}
                 {{ factor }}
             {% endfor %}
             <a href='/' >Read more..</a>
         </div>
 {% endfor %}
-</div>
-<div class='right'>
-Read more
 </div>
 </body>
 </html>
