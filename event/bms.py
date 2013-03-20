@@ -145,7 +145,7 @@ class BMS():
         print 'Adding ', theater_name
         self.r.set(theater_name, {'occu'  : occupancy,
                                   'total' : total,
-                                  'cotner': corner,
+                                  'corner': corner,
                                   'lat'   : random.randrange(1000),
                                   'lon'   : random.randrange(1000)
                                  })

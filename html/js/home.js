@@ -103,11 +103,29 @@ gi.suggest = {
 	    }
 	},	
 	getIdea: function(osm_id){
-		window.location.href = "/loveideaz/getidea/?osmid="+osm_id;
-	}	
+		//window.location.href = "/loveideaz/getidea/?osmid="+osm_id;
+                gi.ajax.get({
+                            url: '/loveideaz/getidea/?',
+                            params: 'osmid='+osm_id,
+                            success: 'placesResponse'
+        });
+	},
+        placesRender: function(placesJSON){
+            var html = '<h1>Ideas</h1>';
+            html+= '<ul>';
+            for(var i=0; i<placesJSON.length;i++){
+                data = placesJSON[i];
+                html+='<li><span class="name">'+ data['name'] + '</span><span class="total">Total: '+ data['total'] + '</span></li>';
+            }
+            html+='</ul>';
+            document.getElementById('places').innerHTML = html;
+        }	
 }
 
 function citySuggest(cityJson){ gi.suggest.cityRender(cityJson); }
+function placesResponse(placesJson){ 
+     places = eval('('+placesJson+')');
+     gi.suggest.placesRender(places); }
 
 gi.ajax = {
 	getAjaxObject: function(){
