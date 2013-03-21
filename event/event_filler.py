@@ -8,8 +8,9 @@ def view_events_by_lat_lon():
     result = []
     r = get_cache('event')
     for key in r._client.zrangebyscore('lat', 0, 5000):
-        d = r.get(key)
+        d = r._client.get(key)
         if d:
+            d = eval(d)
             d['name'] = key
             result.append(d)
     return result
@@ -24,9 +25,9 @@ class Event_Filler:
         Add places in the redis sorted set by lat and lon
         """
         for i in range(1000):
-            d = self.r.get(str(i))
+            d = self.r._client.get(str(i))
             if d:
-                print d
+                d = eval(d)
                 self.r._client.zadd('lat', str(i), d['lat'])
                 self.r._client.zadd('lon', str(i), d['lon'])
 
