@@ -111,11 +111,11 @@ gi.suggest = {
         });
 	},
         placesRender: function(placesJSON){
-            var html = '<h1>Ideas</h1>';
+            var html = '<h3>Ideas <a href="/html/home/contact.html">What - Why</a></h3>';
             html+= '<ul>';
             for(var i=0; i<placesJSON.length;i++){
                 data = placesJSON[i];
-                html+='<li><span class="name">'+ data['name'] + '</span><span class="total">Total: '+ data['total'] + '</span></li>';
+                html+='<li><span class="name">'+ data['name'] + '</span> has total of <span class="total">'+ data['total'] + '</span> of which <span class="occu">'+ data['occu'] + '</span> is empty with corner seats being <span class="corner">'+ data['corner'] + '</span>.</li>';
             }
             html+='</ul>';
             document.getElementById('places').innerHTML = html;

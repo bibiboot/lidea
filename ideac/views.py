@@ -1,4 +1,5 @@
 import pdb
+import random
 from operator import itemgetter
 from django.utils import simplejson
 from django.shortcuts import render_to_response
@@ -37,9 +38,10 @@ def getideas(request):
         print ideas
         """
         theaters = view_events_by_lat_lon()
-        theaters = dummy_data()
+        #theaters = dummy_data()
         #{'lat': 970, 'occu': 53, 'total': 11, 'lon': 758, 'corner': 8, 'name': '11'}
         #return render_to_response('ideac/idea.html', {'theaters': theaters})
+        theaters = theaters[random.randint(0, len(theaters)):]
         return HttpResponse(str(theaters))
 
 def dummy_data():

@@ -18,5 +18,7 @@ urlpatterns = patterns('',
 
    (r'^css/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_PATH +'html/css/'}),
    (r'^js/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_PATH + 'html/js/'}),
+   (r'^html/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_PATH + 'html/templates/'}),
+   (r'^images/(?P<path>.*)$', 'django.views.static.serve', {'document_root': STATIC_PATH + 'html/images/'}),
 
 )

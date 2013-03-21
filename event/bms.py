@@ -9,20 +9,20 @@ from dryscrape.driver.webkit import Node
 class BMS():
     def __init__(self):
         # set up a web scraping session
-        self.r = get_cache('event')
-        return
+        #self.r = get_cache('event')
+        #return
         self.sess = dryscrape.Session(base_url = 'http://in.bookmyshow.com')
         self.sess.set_error_tolerant(True)
-        self.sess.set_attribute('javascript_can_open_windows', False)
-        #sess.set_proxy('10.80.2.13', 80)
-        pdb.set_trace()
-        self.set_cookie()
-        #self.sess.set_html('','')
+        #self.sess.set_attribute('javascript_can_open_windows', False)
+        self.sess.set_attribute('javascript_can_open_windows', True)
+        #self.sess.set_proxy('10.80.2.13', 80)
+        #`self.set_cookie()
+        #self.sess.set_html('http://in.bookmyshow.com/data/promos/notification_bang.xml?t=1363846978003','')
         try:
             self.sess.visit('/')
         except Exception,e:
             print e
-        self.sess.visit('/')
+        self.snapshot('Home')
 
         self.r = get_cache('event')
         self._select_cinema()
@@ -143,7 +143,7 @@ class BMS():
 
     def add_in_cache(self, theater_name, occupancy, total, corner):
         print 'Adding ', theater_name
-        self.r.set(theater_name, {'occu'  : occupancy,
+        self.r._client.set(theater_name, {'occu'  : occupancy,
                                   'total' : total,
                                   'corner': corner,
                                   'lat'   : random.randrange(1000),
@@ -157,5 +157,5 @@ class BMS():
 
 
 bms = BMS()
-#bms.crawl()
-bms.temp_filler()
+bms.crawl()
+#bms.temp_filler()
