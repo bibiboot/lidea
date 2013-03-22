@@ -109,6 +109,8 @@ gi.suggest = {
                             params: 'osmid='+osm_id,
                             success: 'placesResponse'
         });
+	this.hideCity();    
+        
 	},
         placesRender: function(placesJSON){
             var html = '<h3>Ideas <a href="/html/home/contact.html">What - Why</a></h3>';
