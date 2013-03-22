@@ -41,7 +41,7 @@ def getideas(request):
         #theaters = dummy_data()
         #{'lat': 970, 'occu': 53, 'total': 11, 'lon': 758, 'corner': 8, 'name': '11'}
         #return render_to_response('ideac/idea.html', {'theaters': theaters})
-        theaters = theaters[random.randint(0, len(theaters)):]
+        theaters = theaters[random.randint(0, len(theaters)):][:10]
         return HttpResponse(str(theaters))
 
 def dummy_data():
